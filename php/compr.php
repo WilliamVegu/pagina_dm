@@ -35,12 +35,12 @@ try {
             if ($stmt->rowCount() > 0) {
                 $_SESSION['username'] = $user; // Almacenar el nombre de usuario en la sesión
                 echo "<script>
-        window.location.href = 'usuario.php';
+        window.location.href = '/html/usuario.php';
     </script>";
             } else {
                 echo "<script>
         alert('Usuario o contraseña incorrectos');
-        window.location.href = 'registro.php';
+        window.location.href = '/html/registro.php';
     </script>";
             }
         } catch (PDOException $e) {
@@ -51,5 +51,3 @@ try {
     } else {
         die("Método de solicitud no válido. Por favor, use el método POST.");
     }
-
-    // Cerrar la conexión (PDO se cierra automáticamente al finalizar el script)

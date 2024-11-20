@@ -1,4 +1,4 @@
-<?php include 'usuario_con.php'; ?>
+<?php include '../php/usuario_con.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Panel de información personal -->
         <div class="personal-info">
             <h2>ADMISIÓN SMART</h2>
             <img src="avatar-placeholder.png" alt="Avatar" class="avatar">
@@ -36,7 +35,6 @@
             </form>
         </div>
 
-        <!-- Panel de suscripción -->
         <div class="subscription-info">
             <h3>PLAN DE SUSCRIPCIÓN</h3>
             <div class="plans">
@@ -51,12 +49,10 @@
             <p id="diasRestantes">Le restan 15 días a su plan de suscripción</p>
         </div>
 
-        <!-- Ranking, cursos y descarga de APK -->
         <div class="extra-info">
             <div class="ranking">
                 <h3>Posición Ranking</h3>
                 <div id="ranking-list">
-                    <!-- Datos del ranking -->
                 </div>
             </div>
             <div class="courses">
@@ -71,5 +67,5 @@
         </div>
     </div>
 </body>
-<script src="usuario.js"></script>
+<script src="/js/usuario.js"></script>
 </html>

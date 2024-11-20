@@ -19,7 +19,7 @@
 
     <section id="inicio">
         <div>
-            <img src="image.png" alt="Estudiante">
+            <img src="/img/image.png" alt="Estudiante">
             <h1>Tu Futuro Empieza Aquí</h1>
         </div>
     </section>

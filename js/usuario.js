@@ -1,4 +1,4 @@
-fetch('usuario_con.php')
+fetch('/php/usuario_con.php')
     .then((response) => response.json())
     .then((data) => {
         // Verificar si hay un error

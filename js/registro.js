@@ -3,7 +3,6 @@ function validarFormulario() {
     // Validar nombre y apellido (solo letras)
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
-    const direccion = document.getElementById('direccion').value;
     const soloLetras = /^[a-zA-Z\s]+$/;
     if (!soloLetras.test(nombre)) {
         alert('El nombre solo puede contener letras.');
@@ -14,7 +13,6 @@ function validarFormulario() {
         return false;
     }
 
-    // Validar código de estudiante (solo números)
     const dni = document.getElementById('dni').value;
     const soloNumeros = /^[0-9]+$/;
     if (!soloNumeros.test(dni)) {

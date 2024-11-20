@@ -6,14 +6,14 @@
     <title>Registro - Admisión Smart</title>
     <style>
         #formulario-registro, #formulario-ingreso {
-            display: none; /* Oculta ambas secciones por defecto */
+            display: none; 
         }
     </style>
 </head>
 <body>
     <div id="registro-container">
         <div id="descripcion">
-            <img src="image copy.png" alt="Logo de Admisión Smart">
+            <img src="/img/image copy.png" alt="Logo de Admisión Smart">
             <h1>ADMISIÓN SMART</h1>
             <p>
                 Lorem Ipsum es simplemente el texto ficticio de la industria de impresión y composición tipográfica. 
@@ -25,7 +25,7 @@
 
         <div id="formulario-registro">
             <h2>REGISTRARSE</h2>
-            <form id="form-registro" action="registro_con.php" method="POST" onsubmit="return validarFormulario()">
+            <form id="form-registro" action="/php/registro_con.php" method="POST" onsubmit="return validarFormulario()">
                 <label for="nombres">Nombres</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -58,7 +58,7 @@
 
         <div id="formulario-ingreso">
             <h2>INICIAR SESIÓN</h2>
-            <form id="form-ingreso" action="compr.php" method="POST">
+            <form id="form-ingreso" action="/php/compr.php" method="POST">
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correoIngreso" name="correo" required>
 
@@ -70,6 +70,6 @@
         </div>
     </div>
 
-    <script src="registro.js"></script>
+    <script src="/js/registro.js"></script>
 </body>
 </html>
