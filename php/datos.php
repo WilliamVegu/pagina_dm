@@ -26,4 +26,4 @@ try {
 } catch (PDOException $e) {
     error_log("Error al recuperar datos: " . $e->getMessage());
     echo json_encode(['error' => 'Error al recuperar datos']);
-}
+} 

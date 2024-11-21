@@ -10,9 +10,11 @@
         <nav>
             <ul>
                 <li><a href="#">Admisión Smart</a></li>
-                <li><a href="registro.php">Registro</a></li>
+                <li><a href="registro.php">Registrarse/Iniciar sesión</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#planes">Planes</a></li>
+                <li><a href="pago.php">Pago</a></li>
+                
             </ul>
         </nav>
     </header>
