@@ -1,4 +1,13 @@
-<?php include '../php/usuario_con.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo "<script>
+        alert('Por favor, inicie sesión primero.');
+        window.location.href = '/html/registro.php';
+    </script>";
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +20,7 @@
     <div class="container">
         <div class="personal-info">
             <h2>ADMISIÓN SMART</h2>
-            <img src="avatar-placeholder.png" alt="Avatar" class="avatar">
+            <img src="/img/estudiante.png" alt="Avatar" class="avatar">
             <form>
                 <label for="nombre">Nombres:</label>
                 <input type="text" id="nombre" readonly>
