@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +14,18 @@
     </style>
 </head>
 <body>
+<header>
+        <nav>
+            <ul>
+                <li><a href="main.php">Admisión Smart</a></li>
+                <li><a href="registro.php">Registrarse/Iniciar sesión</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="pago.php">Pago</a></li>
+                
+            </ul>
+        </nav>
+    </header>
     <div id="registro-container">
         <div id="descripcion">
             <img src="/img/image copy.png" alt="Logo de Admisión Smart">
@@ -21,6 +36,9 @@
             </p>
             <button onclick="mostrarSeccion('registro')">Registrarse</button>
             <button onclick="mostrarSeccion('ingresar')">Iniciar sesión</button>
+            <form action="/php/cerrar.php" method="POST">
+                <button type="submit">Cerrar Sesión</button>
+            </form>
         </div>
 
         <div id="formulario-registro">
@@ -44,6 +62,9 @@
                 <label for="dni">DNI</label>
                 <input type="text" id="dni" name="dni" required>
 
+                <label for="telefono">Numero de teléfono</label>
+                <input type="text" id="telefono" name="telefono" required>
+
                 <label for="plan">Elección de plan</label>
                 <select id="plan" name="plan" required>
                     <option value="">Seleccione un plan</option>
@@ -52,7 +73,10 @@
                     <option value="anual">Plan Anual</option>
                 </select>
 
-                <button type="submit">Enviar</button>
+                <label for="contrase">Contraseña</label>
+                <input type="text" id="contrase" name="contrase" required>
+
+                <button type="submit">Registrarse</button>
             </form>
         </div>
 
@@ -62,8 +86,8 @@
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correoIngreso" name="correo" required>
 
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="contra" required>
+                <label for="contrase">Contraseña</label>
+                <input type="contrase" id="contrase" name="contrase" required>
 
                 <button type="submit">Ingresar</button>
             </form>

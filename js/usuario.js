@@ -10,12 +10,9 @@ fetch('/php/datos.php')
                     document.getElementById('fechaNacimiento').value = data.fecha;
                     document.getElementById('correo').value = data.correo;
                     document.getElementById('dni').value = data.dni;
+                    document.getElementById('telefono').value = data.telefono;
                     document.getElementById('planActual').textContent += data.plan;
                     document.getElementById('diasRestantes').textContent = `Le restan ${data.dias_restantes} días a su plan de suscripción`;
                     document.getElementById('planSemestral').classList.add('active'); // Ejemplo de activación de un plan
                 }
             })
-            .catch(error => {
-                console.error('Error al obtener datos:', error);
-                alert('Hubo un error al cargar los datos del usuario.');
-            });

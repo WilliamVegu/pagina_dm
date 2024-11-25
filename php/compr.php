@@ -1,19 +1,20 @@
 <?php
+session_start();
 require '..\php\conexion.php';
 // Verificar que el formulario fue enviado con el método POST
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Obtener datos del formulario
         $user = $_POST['correo'];
-        $pass = $_POST['contra'];
+        $pass = $_POST['contrase'];
 
         try {
             // Preparar la consulta SQL
-            $sql = "SELECT * FROM usuario WHERE correo = :correo AND contraseña = :contra";
+            $sql = "SELECT * FROM usuario WHERE correo = :correo AND contrase = :contrase";
             $stmt = $pdo->prepare($sql);
 
             // Enlazar parámetros
             $stmt->bindParam(':correo', $user, PDO::PARAM_STR);
-            $stmt->bindParam(':contra', $pass, PDO::PARAM_STR);
+            $stmt->bindParam(':contrase', $pass, PDO::PARAM_STR);
 
             // Ejecutar la consulta
             $stmt->execute();

@@ -4,12 +4,6 @@ require '../php/conexion.php';
 
 header('Content-Type: application/json');
 
-if (!isset($_SESSION['username'])) {
-    // Enviar una respuesta de error si el usuario no está autenticado
-    echo json_encode(['error' => 'Usuario no autenticado']);
-    exit;
-}
-
 try {
     // Consulta para obtener los datos del usuario
     $sql = "SELECT * FROM usuario WHERE correo = :correo";
@@ -26,4 +20,4 @@ try {
 } catch (PDOException $e) {
     error_log("Error al recuperar datos: " . $e->getMessage());
     echo json_encode(['error' => 'Error al recuperar datos']);
-} 
+}

@@ -17,6 +17,18 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+        <header>
+        <nav>
+            <ul>
+                <li><a href="main.php">Admisión Smart</a></li>
+                <li><a href="registro.php">Registrarse/Iniciar sesión</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="pago.php">Pago</a></li>
+                
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <div class="personal-info">
             <h2>ADMISIÓN SMART</h2>
@@ -37,8 +49,8 @@ if (!isset($_SESSION['username'])) {
                 <label for="dni">DNI:</label>
                 <input type="text" id="dni" readonly>
 
-                <label for="numeroContacto">Número de Contacto:</label>
-                <input type="tel" id="numeroContacto" readonly>
+                <label for="telefono">Número de Contacto:</label>
+                <input type="telefono" id="telefono" readonly>
 
                 <button type="button" id="editar" disabled>Editar</button>
             </form>

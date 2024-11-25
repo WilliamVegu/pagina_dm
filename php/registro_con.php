@@ -9,10 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $direccion = $_POST['direccion'];
     $correo = $_POST['correo'];
     $dni = $_POST['dni'];
+    $telf = $_POST['telefono'];
     $plan = $_POST['plan'];
+    $contr = $_POST['contrase'];
     
     // Preparar la consulta SQL para insertar los datos en la tabla
-    $sql = "INSERT INTO usuario (nombre, apellido, fecha, direccion, correo, dni, plan) VALUES (:nombre, :apellido, :fecha, :direccion, :correo, :dni, :plan)";
+    $sql = "INSERT INTO usuario (nombre, apellido, fecha, direccion, correo, dni, telefono, plan, contrase) VALUES (:nombre, :apellido, :fecha, :direccion, :correo, :dni, :telefono, :plan, :contrase)";
     $stmt = $pdo->prepare($sql);
 
     // Vincular los parámetros y ejecutar la consulta
@@ -22,7 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':direccion', $direccion);
     $stmt->bindParam(':correo', $correo);
     $stmt->bindParam(':dni', $dni);
+    $stmt->bindParam(':telefono', $telf);
     $stmt->bindParam(':plan', $plan);
+    $stmt->bindParam(':contrase', $contr);
     
     // Ejecutar la consulta y verificar si se insertaron los datos correctamente
     if ($stmt->execute()) {
