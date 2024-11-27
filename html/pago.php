@@ -12,11 +12,12 @@ session_start();
 <header>
         <nav>
             <ul>
-                <li><a href="main.php">Admisión Smart</a></li>
+            <li><a href="main.php">Admisión Smart</a></li>
                 <li><a href="registro.php">Registrarse/Iniciar sesión</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#planes">Planes</a></li>
                 <li><a href="pago.php">Pago</a></li>
+                <li><a href="usuario.php">Usuario</a></li>
                 
             </ul>
         </nav>
@@ -25,7 +26,6 @@ session_start();
     
     <div>
         <h2>CODIGO QR DE PAGO</h2>
-        <h5 id="saludo">Hola, <?php echo htmlspecialchars($username); ?>!</h5>
         <h3>YAPE</h3>
         
         <div>
@@ -34,9 +34,9 @@ session_start();
         <br>
             <a href="/img/Instructivo.pdf" download>Seleccione AQUÍ si tiene dudas </a>
         
-        <form action="procesar_pago.php" action="/php/pago.php" method="POST" >
-            <label for="codigoOperacion">CÓDIGO DE OPERACIÓN:</label>
-            <input type="text" id="codigoOperacion" name="codigoOperacion" required><br><br>
+        <form action="/php/pago.php" method="POST" >
+            <label for="codigo">CÓDIGO DE OPERACIÓN:</label>
+            <input type="text" id="codigo" name="codigo" required><br><br>
             <label for="numero">Número de teléfono:</label>
             <input type="tel" id="numero" name="numero" required pattern="^\+?[0-9]{1,3}?[ -]?[0-9]{6,12}$" placeholder="+34 123 456 789"><br><br>
             <button type="submit">ENVIAR</button>

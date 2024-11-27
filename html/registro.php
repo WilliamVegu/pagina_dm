@@ -22,6 +22,7 @@ session_start();
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#planes">Planes</a></li>
                 <li><a href="pago.php">Pago</a></li>
+                <li><a href="usuario.php">Usuario</a></li>
                 
             </ul>
         </nav>

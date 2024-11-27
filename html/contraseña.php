@@ -12,12 +12,12 @@ session_start();
 <header>
         <nav>
             <ul>
-                <li><a href="main.php">Admisión Smart</a></li>
+            <li><a href="main.php">Admisión Smart</a></li>
                 <li><a href="registro.php">Registrarse/Iniciar sesión</a></li>
-                <li><a href="usuario.php">Usuario</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#planes">Planes</a></li>
                 <li><a href="pago.php">Pago</a></li>
-                <li><a href="pago.php">Pago</a></li>
+                <li><a href="usuario.php">Usuario</a></li>
                 
             </ul>
         </nav>
