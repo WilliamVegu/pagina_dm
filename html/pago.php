@@ -1,6 +1,15 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    echo "<script>
+        alert('Por favor, inicie sesión primero.');
+        window.location.href = '/html/registro.php';
+    </script>";
+    exit;
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,7 +46,7 @@ session_start();
         <form action="/php/pago.php" method="POST" >
             <label for="codigo">CÓDIGO DE OPERACIÓN:</label>
             <input type="text" id="codigo" name="codigo" required><br><br>
-            <label for="numero">Número de teléfono:</label>
+            <label for="numero">Número de teléfono con el que se realizará el yapeo:</label>
             <input type="tel" id="numero" name="numero" required pattern="^\+?[0-9]{1,3}?[ -]?[0-9]{6,12}$" placeholder="+34 123 456 789"><br><br>
             <button type="submit">ENVIAR</button>
         </form> 
