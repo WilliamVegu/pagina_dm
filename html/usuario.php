@@ -79,7 +79,6 @@ try {
                 <div class="subscription-info">
                     <h3>PLAN DE SUSCRIPCIÓN</h3>
                     <div class="subscription-info">
-                        <h3>PLAN DE SUSCRIPCIÓN</h3>
                         <div class="plan-actual">
                             <p id="planActual"></p>
                         </div>
@@ -114,15 +113,18 @@ try {
         </html>
         <?php
     }else if ($result && $result['estado'] === 'denegado') {
-        echo "<h1>Su pago ha sido revisado y denegado/invalidado.</h1>";
+        echo "<h1>Su pago ha sido revisado, denegado/invalidado o su periodo pagado ha acabado.</h1>";
         echo "Si no esta de acuerdo con la desicion o necesita ayuda adicional, seleccione el siguiente botón: ";
-        echo "<button onclick=window.location.href='/html/ayuda.php'>ayuda</button>";
+        echo "<button onclick=window.location.href='/html/ayuda.php'>Ayuda</button>";
+        echo "Si desea renovar su pago o cambiar de plan, seleccione el siguiente botón: ";
+        echo "<button onclick=window.location.href='/html/renovar.php'>Renovar</button>";
         }
          else {
         // El estado no es aprobado o no existe pago
         echo "<h1>Usted aun no ha realizado el pago correctamente o su pago aun esta en proceso. Por favor, espere a que sea aprobado.</h1>";
         echo "<button onclick=window.location.href='/html/ayuda.php'>Ir a otro sitio</button>";
         echo "Si su pago lleva mas de 24 horas sin ser aprobado o necesita ayuda adicional, seleccione el siguiente botón: ";
+        echo "<button onclick=window.location.href='/html/ayuda.php'>Ayuda</button>";
         }
 } catch (PDOException $e) {
     // Manejar errores de la consulta
